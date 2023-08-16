@@ -7,12 +7,12 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-# 10.times do
-#   User.create.(
-#     name: Faker::Name.name,
-#     phone_number: Faker::Internet.email,
-#     address: Faker::Address.full_address,
-#     category: Faker::
-#   )
-# end
-# puts
+10.times do
+  Restaurant.create(
+    name: Faker::JapaneseMedia::SwordArtOnline.game_name,
+    address: Faker::JapaneseMedia::SwordArtOnline.location,
+    phone_number: Faker::Internet.email,
+    category: %w[chinese japanese belgian italian french].sample
+  )
+end
+puts 'created 10 random restaurants'
