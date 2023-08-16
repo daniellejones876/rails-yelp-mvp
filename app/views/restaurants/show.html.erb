@@ -1,0 +1,14 @@
+<h1>Restaurants#show</h1>
+
+<div class="card" style="width: 20rem;">
+  <div class="card-body">
+    <img src="https://source.unsplash.com/random/food" class="card-img-top" alt="...">
+    <h5 class="card-title"><%= @restaurant.name%></h5>
+    <p class="card-text lead"><i class="fa-solid fa-utensils"></i> <%= @restaurant.category %></p>
+    <p class="card-text"><i class="fa-solid fa-map-pin"></i> <%= @restaurant.address %></p>
+    <p class="card-text"><i class="fa-solid fa-phone"></i> <%= @restaurant.phone_number %></p>
+  </div>
+  <div class="btn btn-light">
+    <%= link_to "Back to list", restaurants_path(@restaurant) %>
+  </div>
+</div>

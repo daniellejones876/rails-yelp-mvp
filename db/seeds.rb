@@ -6,13 +6,21 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-
-10.times do
+Restaurant.destroy_all
+20.times do
   Restaurant.create(
     name: Faker::JapaneseMedia::SwordArtOnline.game_name,
     address: Faker::JapaneseMedia::SwordArtOnline.location,
-    phone_number: Faker::Internet.email,
+    phone_number: Faker::PhoneNumber.phone_number,
     category: %w[chinese japanese belgian italian french].sample
   )
 end
 puts 'created 10 random restaurants'
+
+# 100.times do
+#   Review.create(
+#     content: Faker::Quote.yoda,
+#     rating: rand(0..5)
+#   )
+# end
+# puts 'created 100 reviews'
